@@ -1,0 +1,1 @@
+1|Passwords stored in plain text|Passwords should not be stored in plain text

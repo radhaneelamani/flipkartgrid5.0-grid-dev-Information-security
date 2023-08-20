@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Booking Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome!</p>
+    <h2>Available Flights</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Departure City</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Arrival City</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+                <th>Available Seats</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flight in flights %}
+            <tr>
+                <td>{{ flight[1] }}</td>
+                <td>{{ flight[2] }}</td>
+                <td>{{ flight[3] }}</td>
+                <td>{{ flight[4] }}</td>
+                <td>{{ flight[5] }}</td>
+                <td>{{ flight[6] }}</td>
+                <td>{{ flight[7] }}</td>
+                <td>{{ flight[8] }}</td>
+                <td><a href="/user/bookticket/{{ flight[1] }}" class="btn btn-primary">Book Ticket</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="/logout" method="GET" class="logout-btn">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

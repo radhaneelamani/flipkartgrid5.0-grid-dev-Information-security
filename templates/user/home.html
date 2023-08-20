@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Booking Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/static/userhome.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+        
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div class="container text-center">
+        <p>Welcome!</p>
+        <h2>Flight Search</h2>
+        <form action="/searchflights" method="POST">
+            <div class="form-group">
+                <label for="from_location">From:</label>
+                <select id="from_location" name="from_location" class="form-control" required>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to_location">To:</label>
+                <select id="to_location" name="to_location" class="form-control" required>
+                    <option value="Goa">Goa</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure_date">Departure Date:</label>
+                <input type="date" id="departure_date" name="departure_date" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search Flights</button>
+        </form>
+
+        <form action="/mybookings" method="GET">
+            <button type="submit" class="btn btn-secondary mt-3">View My Bookings</button>
+        </form>
+
+        <form action="/logout" method="GET" class="logout-btn">
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</body>
+</html>

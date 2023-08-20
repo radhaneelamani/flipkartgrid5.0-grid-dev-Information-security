@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compliance Reports</title>
+
+    <style>
+        /* Reset some default styles for consistency */
+body, p, form, button, label, input, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    background: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Set a pleasant background color and center content */
+div {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Style form containers */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Style labels */
+label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Style file input */
+input[type="file"] {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Style buttons */
+button[type="submit"], a.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover, a.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust spacing for the last button */
+button[type="submit"]:last-child {
+    margin-top: 15px;
+}
+
+/* Center the "Generate Compliance Report" button */
+a.btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.header{
+text-align: center;
+}
+    </style>
+</head>
+<body>
+<h1 class="header">Compliance Report Generator</h1>
+<div>
+    <form action="/admin/generate_logs" method="post">
+        <button type="submit">Generate Logs</button>
+    </form>
+
+    <form action="/admin/upload_logs" method="post" enctype="multipart/form-data">
+        <label for="log_file">Upload Log File:</label>
+        <input type="file" id="log_file" name="log_file">
+        <button type="submit">Upload Log File</button>
+    </form>
+
+    <form action="/admin/upload_rules" method="post" enctype="multipart/form-data">
+        <label for="rules_file">Upload Compliance Rule File:</label>
+        <input type="file" id="rules_file" name="rules_file">
+        <button type="submit">Upload Rules File</button>
+    </form>
+
+    <a href="/admin/generate_compliance_report" class="btn">Generate Compliance Report</a>
+</div>
+
+</body>
+</html>

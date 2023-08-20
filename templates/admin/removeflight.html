@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Flights</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #cc0000;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #a30000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Remove Flights</h3>
+        <form action="/admin/removeflight" method="POST">
+            <div class="form-group">
+                <label for="flight_number">Flight Number:</label>
+                <input type="text" id="flight_number" name="flight_number" class="form-control" required>
+            </div>
+            <input type="submit" value="Remove Flight" class="btn btn-danger">
+        </form>
+    </div>
+
+</body>
+</html>

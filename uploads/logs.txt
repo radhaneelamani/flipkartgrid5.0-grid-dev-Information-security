@@ -1,0 +1,18 @@
+chrish||Successful login|2023-08-19 03:56:46
+chrish||User logged out|2023-08-19 03:58:47
+chrish||Successful login|2023-08-19 03:58:59
+chrish||User logged out|2023-08-19 04:00:36
+chrish||Successful login|2023-08-19 04:01:09
+chrish||User logged out|2023-08-19 04:01:50
+chrish|hemsworth12|Successful login|2023-08-19 04:07:36
+chrish|stored_password|Viewed own bookings|2023-08-19 04:08:02
+chrish|stored_password|User logged out|2023-08-19 04:08:48
+chrish|hemsworth12|Successful login|2023-08-20 17:39:25
+chrish|stored_password|Viewed own bookings|2023-08-20 17:39:42
+chrish|stored_password|User logged out|2023-08-20 17:39:48
+tomh|holland22|Successful login|2023-08-20 18:14:29
+tomh|stored_password|Viewed own bookings|2023-08-20 18:14:45
+tomh|stored_password|User logged out|2023-08-20 18:14:53
+tomh|holland22|Successful login|2023-08-20 18:43:12
+tomh|stored_password|Viewed own bookings|2023-08-20 18:43:14
+tomh|stored_password|User logged out|2023-08-20 18:43:16

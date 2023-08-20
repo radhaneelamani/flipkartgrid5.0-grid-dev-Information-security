@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Flight</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #0066cc;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0052a3;
+        }
+        
+        .home-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-button a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Add Flights</h3>
+        <!-- Add flights form -->
+        <form action="/admin/addflight" method="POST" >
+            <label for="flight_number">Flight Number:</label>
+            <input type="text" id="flight_number" name="flight_number" required>
+
+            <label for="departure_city">Departure City:</label>
+            <input type="text" id="departure_city" name="departure_city" required>
+            
+            <label for="departure_date">Departure Date:</label>
+            <input type="text" id="departure_date" name="departure_date" required>
+            
+            <label for="departure_time">Departure Time:</label>
+            <input type="text" id="departure_time" name="departure_time" required>
+            
+            <label for="arrival_city">Arrival City:</label>
+            <input type="text" id="arrival_city" name="arrival_city" required>
+
+            <label for="arrival_date">Arrival Date:</label>
+            <input type="text" id="arrival_date" name="arrival_date" required>
+
+            <label for="arrival_time">Arrival Time:</label>
+            <input type="text" id="arrival_time" name="arrival_time" required>
+            
+            <label for="available_seats">Available Seats:</label>
+            <input type="text" id="available_seats" name="available_seats" required>
+
+            <input type="submit" value="Add Flight">
+        </form>
+        <div class="home-button">
+            <a href="/admin/home">Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

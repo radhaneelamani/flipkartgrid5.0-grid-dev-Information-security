@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+<!--        h1 {-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        .btn {
+            color: #fff;
+            background-color: #0066cc;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0052a3;
+        }
+
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        form button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-weight: 500;
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        form button:hover {
+            color: #0052a3;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Welcome, Admin!</h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <br>
+                <a href="/admin/compliance" class="btn">Compliance Check</a>
+            </div>
+        </div>
+        <h2>Current Flights</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure Date</th>
+                    <th>Arrival Date</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Available Seats</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flight in flights %}
+                <tr>
+                    <td>{{ flight[1] }}</td>
+                    <td>{{ flight[2] }}</td>
+                    <td>{{ flight[5] }}</td>
+                    <td>{{ flight[3] }}</td>
+                    <td>{{ flight[6] }}</td>
+                    <td>{{ flight[4] }}</td>
+                    <td>{{ flight[7] }}</td>
+                    <td>{{ flight[8] }}</td>
+                    <td><a href="/admin/passengerdetails/{{ flight[1] }}">View Details</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Flight Management</h2>
+        <div class="text-center">
+            <a href="/admin/addflight" class="btn">Add Flight</a>
+            <a href="/admin/removeflight" class="btn">Remove Flight</a>
+        </div>
+        <form action="/logout" method="GET">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Booking Successful</h2>
+        <h3>Booking Details</h3>
+        <p>Booking ID: {{ booking[0] }}</p>
+        <p>First Name: {{ booking[1] }}</p>
+        <p>Last Name: {{ booking[2] }}</p>
+        <p>Gender: {{ booking[3] }}</p>
+        <p>Phone Number: {{ booking[4] }}</p>
+        <p>Email: {{ booking[5] }}</p>
+
+        <h3>Flight Details</h3>
+        <p>Flight ID: {{ flight[0] }}</p>
+        <p>Flight Number: {{ flight[1] }}</p>
+        <p>Departure City: {{ flight[2] }}</p>
+        <p>Arrival City: {{ flight[5] }}</p>
+        <p>Departure Date: {{ flight[3] }}</p>
+        <p>Departure Time: {{ flight[4] }}</p>
+
+        <h3>Thank you for booking with us!</h3>
+        <a href="/userhome">Home</a>
+    </div>
+
+</body>
+</html>
